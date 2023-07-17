@@ -31,10 +31,12 @@ app.use(cors());
     res.status(200).json("File has been uploaded");
   });
 
+  const PORT_NO  = process.env.PORT || 8080 ;
+
  app.use("/api/auth",authRoute);
  app.use("/api/users",userRoute);
  app.use("/api/posts",postRoute);
  app.use("/api/categories",categoryRoute);
-app.listen(8080,()=>{
+app.listen(PORT_NO,()=>{
     console.log("Backend is running"); 
 });
