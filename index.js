@@ -13,7 +13,7 @@ const authRoute = require("./routes/auth.js");
 
  dotenv.config();
  app.use(express.json());
- app.use("/images",express.static(path.join(__dirname,"/images")));
+ app.use("/api/images",express.static(path.join(__dirname,"/images")));
 app.use(cors());
  mongoose.connect(process.env.MONGO_URL).then(console.log("connected to mongodb")).catch((err)=>console.log(err));
 
