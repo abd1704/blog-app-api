@@ -88,6 +88,8 @@ router.put("/:id", async (req, res) => {
         }
         else if(catName){
             posts = await Post.find({categories:{
+              // the below in checks if catName is present
+              // in array if it is equal
                 $in:[catName]
             }})
         }
